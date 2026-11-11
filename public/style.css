@@ -1,0 +1,37 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #eef1f6; height: 100vh; color: #1f2937; }
+.hidden { display: none !important; }
+
+.login { height: 100vh; display: flex; align-items: center; justify-content: center; }
+.card { background: #fff; padding: 2rem; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.1); width: 320px; display: flex; flex-direction: column; gap: .8rem; text-align: center; }
+.card p { color: #6b7280; font-size: .9rem; }
+.error { color: #dc2626; min-height: 1em; }
+
+input { padding: .7rem .9rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; outline: none; }
+input:focus { border-color: #4f46e5; }
+button { padding: .7rem 1.2rem; border: 0; border-radius: 8px; background: #4f46e5; color: #fff; font-size: 1rem; cursor: pointer; }
+button:hover { background: #4338ca; }
+
+.app { display: flex; height: 100vh; max-width: 1000px; margin: 0 auto; background: #fff; box-shadow: 0 0 30px rgba(0,0,0,.08); }
+.sidebar { width: 220px; background: #1e1b4b; color: #e0e7ff; padding: 1rem; overflow-y: auto; }
+.sidebar h2 { font-size: 1rem; margin-bottom: .8rem; }
+.sidebar ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.sidebar li::before { content: '● '; color: #22c55e; }
+
+.chat { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.chat header { padding: 1rem; border-bottom: 1px solid #e5e7eb; display: flex; align-items: center; gap: .6rem; }
+.chat header #me { margin-left: auto; color: #6b7280; font-size: .9rem; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; }
+.dot.online { background: #22c55e; }
+
+#messages { flex: 1; list-style: none; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: .6rem; background: #f9fafb; }
+.msg { max-width: 70%; padding: .6rem .9rem; border-radius: 14px 14px 14px 4px; background: #e5e7eb; display: flex; flex-direction: column; word-break: break-word; }
+.msg.mine { align-self: flex-end; background: #4f46e5; color: #fff; border-radius: 14px 14px 4px 14px; }
+.meta { font-size: .7rem; opacity: .7; margin-bottom: .2rem; }
+.system { align-self: center; font-size: .8rem; color: #6b7280; font-style: italic; }
+.typing { height: 1.4rem; padding: 0 1rem; font-size: .8rem; color: #6b7280; font-style: italic; }
+
+#chat-form { display: flex; gap: .5rem; padding: 1rem; border-top: 1px solid #e5e7eb; }
+#chat-form input { flex: 1; }
+
+@media (max-width: 640px) { .sidebar { display: none; } .msg { max-width: 85%; } }
